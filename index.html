@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title> WISER Dashboard v2.0 </title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- MetisMenu CSS -->
+	<link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="/lib/html5shiv.js"></script>
+		<script src="/lib/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/images/favicons/manifest.json">
+	<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/images/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#fe7400">
+
+	<!-- Timeline CSS -->
+	<link href="/dist/css/timeline.css" rel="stylesheet">
+
+  	<!-- Custom Fonts -->
+  	<link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">'
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/"> <img src="/images/smartufba_logo_monochrome.png" class="logo-navbar" height="100%">
+				Wiser Dashboard
+			</a>
+		</div>
+		<!-- /.navbar-header -->
+
+		<!-- Sidebar Menu -->
+		<div class="navbar-default sidebar" role="navigation">
+	  		<div class="sidebar-nav navbar-collapse">
+				<ul class="nav" id="side-menu">
+		  		<!-- /input-group -->
+		 			<li> <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a> </li>
+		  			<!-- /.nav-second-level -->
+				</ul>
+	  		</div>
+	  		<!-- /.sidebar-collapse -->
+		</div>
+		<!-- /.navbar-static-side -->
+
+	</nav>
+
+  	<!-- Page Content -->
+  	<div id="page-wrapper">
+
+    	<!-- Throw content here -->
+    	<div class="row">
+  			<div class="col-lg-12">
+    			<h1 class="page-header">Dashboard</h1>
+  			</div>
+  			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.row -->
+
+		<div class="row">
+  			<!-- Box -->
+  			<box label="Temperature"
+    	 	 	 icon="tachometer"
+       	 	 	 color="red"
+        	 	 content-prefix=""
+       		 	 content-suffix="º C"
+       	 	 	 content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/temperature/devices/sensor/temperature"
+       		 	 property-name='["Temperature", "degree"]'
+       		 	 requisition-method="GET"
+       		 	:refresh-time="5000">
+  			</box>
+  		
+			<box label="Luminosity"
+       		 	 icon="sun-o"
+       		 	 color="yellow"
+       		 	 content-prefix=""
+       		 	 content-suffix=""
+       		 	 content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/luminosity/devices/sensor/luminosity"
+       		 	 property-name='["Luminosity", "percent"]'
+       		 	 requisition-method="GET"
+       			:refresh-time="5000">
+  			</box>
+  
+			<box label="Humidity"
+       		 	 icon="tint"
+       		 	 color="light-blue"
+       		 	 content-prefix=""
+        	 	 content-suffix=" %"
+       	 	 	 content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/humidity/devices/sensor/humidity"
+       		 	 property-name='["Humidity", "percent"]'
+       		 	 requisition-method="GET"
+       	 		:refresh-time="5000">
+  			</box>
+
+			<!-- Box -->
+  			<box label="Air Dust"
+    	 	 	 icon="cloud"
+       	 	 	 color="green"
+        	 	 content-prefix=""
+       		 	 content-suffix=""
+       	 	 	 content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/dust/devices/sensor/dust"
+       		 	 property-name='["Dust", "value"]'
+       		 	 requisition-method="GET"
+       		 	:refresh-time="5000">
+  			</box>
+  		
+
+		</div>
+		<!-- /.row -->
+
+		<div class="row" style="text-align:center;">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i class="fa fa-video-camera fa-fw" _v-2c642e0b=""></i>
+					Video Camera Wiser 261
+				</div>
+				<div class="panel-body">
+					<img src="http://camera1-wiser-261.wisergroup.tk/" alt="http://camera1-wiser-261.wisergroup.tk/" class="shrinkToFit" style="max-width:640px;max-height:480px;height:100%;width:100%;">
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+
+  		<!--
+  		content-url="http://ec2-52-42-75-239.us-west-2.compute.amazonaws.com:8080/smartUFBA/query"
+  		query-sparql="SELECT ?type ?time ?data WHERE { ?type <http://purl.oclc.org/NET/ssnx/ssn#madeObservation> ?a . FILTER regex(str(?type), 'ufbaino01') ?a <http://purl.oclc.org/NET/ssnx/ssn#observationResult> ?b . ?a <http://purl.oclc.org/NET/ssnx/ssn#observationSamplingTime> ?x . ?x <http://www.loa-cnr.it/ontologies/DUL.owl#hasIntervalDate> ?time . ?b <http://purl.oclc.org/NET/ssnx/ssn#hasValue> ?c . ?c <http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue> ?data} ORDER BY DESC (?time)"
+  		requisition-method="POST"
+  		property-name='["results","bindings","0","data","value"]'
+  		-->
+
+		<div class="row">
+	  		<moving-chart label="Luminosty readings in the last 60 seconds"
+        	              content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/luminosity/devices/sensor/luminosity"
+                	 	  property-name='["Luminosity", "percent"]'
+                		  requisition-method="GET"
+               	 		 :initial-value="0"
+                		 :content-height="1024"
+                		 :content-length="60"
+            	    	 :refresh-time="5000">
+  			</moving-chart>
+		</div>
+		<!-- /.row -->
+
+		<div class="row">
+  			<moving-chart label="Temperature readings in the last 60 seconds"
+                 	  	  content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/temperature/devices/sensor/temperature"
+                 		  property-name='["Temperature", "degree"]'
+                	 	  requisition-method="GET"
+                	 	 :initial-value="0"
+                		 :content-height="40"
+                		 :content-length="60"
+            	    	 :refresh-time="5000">
+  			</moving-chart>
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/dist/js/sb-admin-2.js"></script>
+
+<!-- Flot Charts JavaScript -->
+<script src="/bower_components/flot/excanvas.min.js"></script>
+<script src="/bower_components/flot/jquery.flot.js"></script>
+<script src="/bower_components/flot/jquery.flot.pie.js"></script>
+<script src="/bower_components/flot/jquery.flot.resize.js"></script>
+<script src="/bower_components/flot/jquery.flot.time.js"></script>
+<script src="/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="/bower_components/raphael/raphael-min.js"></script>
+<script src="/bower_components/morrisjs/morris.min.js"></script>
+
+<!-- Vue Js modules -->
+<script src="/dist/js/main_bundle.js"></script>
+
+<!-- Little workarround for small content in box -->
+<script>
+	var workarroundInterval = setInterval(function(){ 
+		var x = document.getElementsByClassName("huge"); 
+		console.log("Trying fix box..."); 
+
+		if(x.length >= 3) { 
+			console.log("Box Fixed"); 
+			clearInterval(workarroundInterval); 
+
+			for (var i = 0; i < x.length; i++){ 
+				var el = x[i]; 
+				//el.innerHTML = el.innerHTML.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/'/g, '"'); 
+			} 
+		} 
+	}, 1000);
+</script>
+
+</body>
+
+</html>
