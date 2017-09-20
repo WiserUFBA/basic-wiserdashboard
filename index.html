@@ -130,6 +130,17 @@
        		 	 requisition-method="GET"
        			:refresh-time="5000">
   			</box>
+			
+			<box label="Sound"
+       		 	 icon="volume-op"
+       		 	 color="pink"
+       		 	 content-prefix=""
+       		 	 content-suffix=""
+       		 	 content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/sound/devices/sensor/sound"
+       		 	 property-name='["Sound", "noise"]'
+       		 	 requisition-method="GET"
+       			:refresh-time="5000">
+  			</box>
   
 			<box label="Humidity"
        		 	 icon="tint"
@@ -147,7 +158,7 @@
     	 	 	 icon="cloud"
        	 	 	 color="green"
         	 	 content-prefix=""
-       		 	 content-suffix=""
+       		 	 content-suffix=" ug/m3"
        	 	 	 content-url="http://servicemix-rasp1.wisergroup.tk/cxf/device01/dust/devices/sensor/dust"
        		 	 property-name='["Dust", "value"]'
        		 	 requisition-method="GET"
